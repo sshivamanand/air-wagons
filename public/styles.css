@@ -1,0 +1,391 @@
+body {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("/public/images/backgroud.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  filter: blur(1px);
+  z-index: -1;
+}
+
+.landing-page {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  color: white;
+}
+
+.landing-page .header {
+  height: 7rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  padding: 0 2rem;
+}
+
+.landing-page img {
+  height: 53px;
+  width: 180.5px;
+}
+
+.landing-page p {
+  margin-right: 2rem;
+  font-size: 1.1rem;
+  color: #4e4e6a;
+  cursor: pointer;
+}
+
+.landing-page .main {
+  position: fixed;
+  top: 20rem;
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  align-items: center;
+  z-index: 1;
+}
+
+.landing-page .box {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 150px;
+}
+
+.landing-page .box input,
+.landing-page .box select {
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.landing-page .box label {
+  font-size: 1rem;
+  color: #333;
+}
+
+.landing-page button {
+  background-color: #4e4e6a;
+  color: white;
+  padding: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.landing-page button:hover {
+  background-color: #3e3e5d;
+}
+
+.login-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-box {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  margin-left: 10rem;
+}
+
+h2 {
+  margin-bottom: 30px;
+  font-size: 24px;
+  color: #333;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  font-size: 14px;
+  color: #555;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: #45a049;
+}
+
+.signup-link {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #555;
+}
+
+.signup-link a {
+  text-decoration: none;
+  color: #4caf50;
+  font-weight: bold;
+}
+
+.signup-link a:hover {
+  text-decoration: underline;
+}
+
+.details {
+  margin-top: 1vh;
+  height: 70vh;
+  width: 80vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.details-in1 {
+  margin-top: 2rem;
+  width: 50vw;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.details-in2 {
+  margin-top: 2rem;
+  align-items: end;
+  width: 25vw;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.passengerDetails {
+  margin-left: 0.5rem;
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 44rem;
+}
+
+.Contact-Info-Details {
+  margin-left: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 40rem;
+}
+
+/* Main container */
+.transaction-container {
+  width: 100%;
+  max-width: 450px;
+  margin: 2rem auto;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  font-family: "Arial", sans-serif;
+  transition: all 0.3s ease-in-out;
+  position: relative; /* Ensure sections are positioned relative to this container */
+}
+
+/* Tab buttons container */
+.tab-buttons {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #e0e0e0;
+  z-index: 2; /* Keep the buttons on top of the sections */
+}
+
+/* Individual tab button */
+.tab-button {
+  flex: 1;
+  padding: 12px 0;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #555;
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+}
+
+.tab-button:first-child {
+  border-radius: 12px 0 0 0;
+}
+
+.tab-button:last-child {
+  border-radius: 0 12px 0 0;
+}
+
+.tab-button.active {
+  background: linear-gradient(to right, #4caf50, #66bb6a);
+  color: #fff;
+  border-top: 2px solid #4caf50;
+  border-right: 1px solid #e0e0e0;
+  border-left: 1px solid #e0e0e0;
+}
+
+.tab-button:hover {
+  background-color: #e0e0e0;
+  color: #333;
+}
+
+/* Content sections container */
+.sections-container {
+  position: relative; /* Ensure sections are contained within the container */
+  height: auto;
+  padding: 16px;
+  overflow: hidden; /* Prevents sections from overflowing during transitions */
+}
+
+/* Shared styles for both sections */
+.card-section,
+.upi-section {
+  opacity: 0; /* Start with hidden */
+  position: absolute; /* Remove space in layout when hidden */
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateY(20px); /* Slightly move sections off-screen */
+  visibility: hidden; /* Prevent layout shift */
+  pointer-events: none; /* Prevent interaction when invisible */
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth opacity and transform transitions */
+}
+
+/* When sections are visible */
+.card-section.visible,
+.upi-section.visible {
+  opacity: 1; /* Make visible */
+  visibility: visible; /* Make visible */
+  pointer-events: all; /* Enable interaction when visible */
+  transform: translateY(0); /* Bring section back into normal flow */
+  position: relative; /* Restore normal flow in layout */
+}
+
+/* Input fields */
+input {
+  width: 93%;
+  padding: 10px 12px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.1);
+  font-size: 0.9rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus {
+  border-color: #4caf50;
+  box-shadow: 0px 0px 6px rgba(76, 175, 80, 0.2);
+  outline: none;
+}
+
+/* Label styles */
+label {
+  font-size: 0.85rem;
+  color: #555;
+  margin-bottom: 4px;
+  display: block;
+}
+
+/* Section headings */
+h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 16px;
+  border-bottom: 3px solid #4caf50;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+
+/* Add padding between inputs */
+input + input {
+  margin-top: 10px;
+}
+
+/* Button and input hover improvements */
+input:hover {
+  border-color: #999;
+  transition: border-color 0.3s ease;
+}
+
+@media (max-width: 480px) {
+  .login-box {
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  .input-group input {
+    font-size: 14px;
+  }
+
+  .login-btn {
+    font-size: 14px;
+  }
+}
+
